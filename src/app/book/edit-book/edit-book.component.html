@@ -1,0 +1,23 @@
+<h1>Edit User</h1>
+<form [formGroup]="bookForm" (ngSubmit)="editBook()">
+  <table>
+    <tr>
+      <td>Title: </td>
+      <td><input type="text" formControlName="title" ></td>
+    </tr>
+    <tr>
+      <td>Author:</td>
+      <td><input type="text" formControlName="author"></td>
+    </tr>
+    <tr>
+      <td>Description:</td>
+      <td><input type="text" formControlName="description" ></td>
+    </tr>
+    <tr>
+      <td><button type="submit">Cập nhật</button></td>
+      <td><button [routerLink]="['']">Thoát</button></td>
+    </tr>
+  </table>
+</form>
+
+
