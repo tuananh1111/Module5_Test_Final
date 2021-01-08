@@ -1,19 +1,24 @@
-<h2>Danh sách những cuốn truyện hay nhất</h2>
-<div><button [routerLink]="['/create']">Create New Book</button></div>
-<table>
-  <tr>Có tất cả {{listBook.length}} cuốn</tr>
-  <tr>
-    <th>ID</th>
-    <th>Title</th>
-    <th>Author</th>
-    <td>Action</td>
-    <td>Action</td>
-  </tr>
-  <tr *ngFor="let book of listBook">
-    <td><a [routerLink]="['/detail', book.id]">{{book.id}}</a></td>
-    <td>{{book.title}}</td>
-    <td>{{book.author}}</td>
-    <td><button [routerLink]="['/edit', book.id]">Edit</button></td>
-    <td><button (click)="delete(book.id)">Delete</button></td>
-  </tr>
-</table>
+
+<div class="col-md-6 offset-md-3">
+  <center>
+    <h2>Danh sách những cuốn truyện hay nhất</h2>
+    <div><button [routerLink]="['/create']" class="btn-outline-primary">Create New Book</button></div>
+  </center>
+  <table class="table">
+    <tr>Có tất cả {{listBook.length}} cuốn</tr>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Author</th>
+      <td>Action</td>
+      <td>Action</td>
+    </tr>
+    <tr *ngFor="let book of listBook">
+      <td><a [routerLink]="['/detail', book.id]">{{book.id}}</a></td>
+      <td>{{book.title}}</td>
+      <td>{{book.author}}</td>
+      <td><button [routerLink]="['/edit', book.id]" class="btn-outline-warning">Edit</button></td>
+      <td><button (click)="delete(book.id)" class="btn-outline-danger">Delete</button></td>
+    </tr>
+  </table>
+</div>
